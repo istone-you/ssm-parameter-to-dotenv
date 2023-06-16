@@ -1,14 +1,12 @@
-# Welcome to your CDK TypeScript project
+# SSM パラメータストアから.env ファイルを作成
 
-This is a blank project for CDK development with TypeScript.
+## パラメータ
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+`.env`と`parameters.json`をルートディレクトリに作成し、<br>
+`.env`には
 
-## Useful commands
+- SNS_ARN
+- INSTANCE_ID
+- SSM_PARAMETER_PREFIX
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+`parameters.json`には SSM パラメータストアに格納するパラメータを記述します。
